@@ -11,7 +11,22 @@ const rulesForSass = {
   use: ['style-loader', 'css-loader', 'sass-loader']
 }
 
-const rules = [rulesForJavascript, rulesForSass]
+const rulesForImages = {
+  type: 'asset/resource',
+  test: /\.(png|jpe?g|gif|svg)$/i,
+  generator: {
+    filename: 'img/[hash][ext]'
+  }
+  /* use: {
+    loader: 'file-loader',
+    options: {
+      outputPath: 'img/'
+      // name: '[name][hashcontent].[ext]'
+    }
+  } */
+}
+
+const rules = [rulesForJavascript, rulesForSass, rulesForImages]
 
 module.exports = (env, argv) => {
   // entry: "./src/index.js"
