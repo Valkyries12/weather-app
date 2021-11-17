@@ -13,7 +13,7 @@ import './images/search-icon.png'
 
 const getWeatherToday = async function (city = 'buenos aires') {
   const key = 'e0ac5f463540bed37a365e85ae486e39'
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
   try {
     const response = await fetch(url)
     const data = await response.json()
