@@ -9,14 +9,14 @@
 </head>
 <body>
     <div class="main-weather">
-        <p class="main-weather__description">broken clouds</p>
-        <p class="main-weather__city-name">london</p>
-        <p class="main-weather__time">Sunday, 14th Nov 21 8:49pm</p>
-        <p class="main-weather__temp">11 ºC</p>
-        <img class="weather-icon-form" src="<%=require('./images/SVG/cloudy.svg')%>" alt="">
+        <p class="main-weather__description"></p>
+        <p class="main-weather__city-name"></p>
+        <p class="main-weather__time"></p>
+        <p class="main-weather__temp"></p>
+        <img class="weather-icon-form" src="" alt="">
         <form action="#" class="main-weather__search">
             <input type="search" class="main-weather__search__searchbar" placeholder="search location...">
-            <img class="weather-icon" src="<%=require('./images/search-icon.png')%>" alt="search icon">
+            <img class="weather-icon weather-icon-search" src="<%=require('./images/search-icon.png')%>" alt="search icon">
         </form>
     </div>
 
@@ -25,7 +25,7 @@
             <img src="<%=require('./images/SVG/thermo.svg')%>" alt="" class="weather-icon weather-stats__status__image">
             <div class="weather-stats__status__container">
                 <p class="weather-stats__status__container__text">feels like</p>
-                <p class="weather-stats__status__container__temp">10 ºC</p>
+                <p class="weather-stats__status__container__temp"></p>
             </div>
         </div>
 
@@ -33,16 +33,16 @@
             <img src="<%=require('./images/SVG/humidity.svg')%>" alt="" class="weather-icon weather-stats__status__image">
             <div class="weather-stats__status__container">
                 <p class="weather-stats__status__container__text">humidity</p>
-                <p class="weather-stats__status__container__temp">10 ºC</p>
+                <p class="weather-stats__status__container__humidity"></p>
             </div>
 
         </div>
 
         <div class="weather-stats__status">
-            <img src="<%=require('./images/SVG/rainy.svg')%>" alt="" class="weather-icon weather-stats__status__image">
+            <img src="<%=require('./images/SVG/11d.svg')%>" alt="" class="weather-icon weather-stats__status__image">
             <div class="weather-stats__status__container">
                 <p class="weather-stats__status__container__text">Chance of Rain</p>
-                <p class="weather-stats__status__container__temp">0.2%</p>
+                <p class="weather-stats__status__container__chance-rain">1%</p>
             </div>
         </div>
 
@@ -50,61 +50,14 @@
             <img src="<%=require('./images/SVG/wind.svg')%>" alt="" class="weather-icon weather-stats__status__image">
             <div class="weather-stats__status__container">
                 <p class="weather-stats__status__container__text">wind speed</p>
-                <p class="weather-stats__status__container__temp">7.4km/h</p>
+                <p class="weather-stats__status__container__wind-speed"></p>
             </div>
 
         </div>
     </div>
 
     <div class="weather-weekly">
-        <div class="weather-weekly__container">
-            <p class="weather-weekly__container__day">monday</p>
-            <p class="weather-weekly__container__max-temp">12 ºC</p>
-            <p class="weather-weekly__container__min-temp">9º C</p>
-            <img src="<%=require('./images/SVG/cloudy.svg')%>" alt="" class="weather-icon weather-weekly__container__image">
-        </div>
 
-        <div class="weather-weekly__container">
-            <p class="weather-weekly__container__day">tuesday</p>
-            <p class="weather-weekly__container__max-temp">12 ºC</p>
-            <p class="weather-weekly__container__min-temp">7º C</p>
-            <img src="<%=require('./images/SVG/cloudy-day.svg')%>" alt="" class="weather-icon weather-weekly__container__image">
-        </div>
-
-        <div class="weather-weekly__container">
-            <p class="weather-weekly__container__day">wednesday</p>
-            <p class="weather-weekly__container__max-temp">10 ºC</p>
-            <p class="weather-weekly__container__min-temp">6º C</p>
-            <img src="<%=require('./images/SVG/cloudy.svg')%>" alt="" class="weather-icon weather-weekly__container__image">
-        </div>
-
-        <div class="weather-weekly__container">
-            <p class="weather-weekly__container__day">thursday</p>
-            <p class="weather-weekly__container__max-temp">12 ºC</p>
-            <p class="weather-weekly__container__min-temp">7º C</p>
-            <img src="<%=require('./images/SVG/cloudy.svg')%>" alt="" class="weather-icon weather-weekly__container__image">
-        </div>
-
-        <div class="weather-weekly__container">
-            <p class="weather-weekly__container__day">friday</p>
-            <p class="weather-weekly__container__max-temp">13 ºC</p>
-            <p class="weather-weekly__container__min-temp">9º C</p>
-            <img src="<%=require('./images/SVG/sun.svg')%>" alt="" class="weather-icon weather-weekly__container__image">
-        </div>
-
-        <div class="weather-weekly__container">
-            <p class="weather-weekly__container__day">saturday</p>
-            <p class="weather-weekly__container__max-temp">12 ºC</p>
-            <p class="weather-weekly__container__min-temp">5º C</p>
-            <img src="<%=require('./images/SVG/sun.svg')%>" alt="" class="weather-icon weather-weekly__container__image">
-        </div>
-
-        <div class="weather-weekly__container">
-            <p class="weather-weekly__container__day">sunday</p>
-            <p class="weather-weekly__container__max-temp">9 ºC</p>
-            <p class="weather-weekly__container__min-temp">3º C</p>
-            <img src="<%=require('./images/SVG/cloudy-day.svg')%>" alt="" class="weather-icon weather-weekly__container__image">
-        </div>
     </div>
 </body>
 </html>

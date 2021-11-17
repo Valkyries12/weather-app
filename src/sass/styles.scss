@@ -31,6 +31,10 @@ body {
     }
 }
 
+.weather-icon-search {
+    cursor: pointer;
+}
+
 .weather-icon {
     width: 1.2rem;
 
@@ -140,7 +144,7 @@ body {
 
     @include desktop {
         gap: 35px 0;
-        max-width: 160px;
+        max-width: 170px;
     }
 
     
@@ -163,10 +167,17 @@ body {
             display: flex;
             flex-direction: column;
             gap: 3px 0;
-            text-transform: capitalize;
+
+            &__text {
+                text-transform: capitalize;
+            }
     
-            &__temp {
+            &__temp,
+            &__humidity,
+            &__chance-rain,
+            &__wind-speed {
                 font-size: 1.04rem;
+                
 
                 @include desktop {
                     font-size: 1.5rem;
@@ -187,7 +198,8 @@ body {
     width: 100%;
     grid-area: weekly;
     max-width: 320px;
-    justify-self: center;    
+    justify-self: center; 
+    gap: .2rem;   
 
     @include desktop {
         // flex-direction: row;
@@ -212,12 +224,13 @@ body {
             grid-column: 1/3;
             text-transform: capitalize;
             font-size: 0.8rem;
+            align-self: center;
             
             @include desktop {
                 grid-column: 1/2;
                 grid-row: 1/2;
                 align-self: start;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
         }
 
