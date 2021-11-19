@@ -10,4 +10,10 @@ function kelvinToCelsius (kelvin) {
   return result
 }
 
-export { clean, kelvinToCelsius }
+function trimValue (value) {
+  const result = value.replace(/[^a-zA-Z ]/g, '')
+  console.log(result)
+  return result
+}
+
+export { clean, kelvinToCelsius, trimValue }
