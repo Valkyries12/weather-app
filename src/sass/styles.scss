@@ -35,6 +35,10 @@ body {
     }
 }
 
+.invisible {
+    display: none;
+}
+
 .weather-icon-search {
     cursor: pointer;
 }
@@ -130,6 +134,20 @@ body {
             }
         }
 
+    }
+
+    &__not-found {
+
+        &__text {
+            font-size: 0.56rem;
+
+            @include tablet {
+                font-size: .76rem;
+                
+            }
+        }
+
+      
     }
 
 

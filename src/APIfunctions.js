@@ -1,17 +1,21 @@
+import { displayNotFoundMessage, hideNotFoundMessage } from './domFunctions'
 
 const getWeatherToday = async function (city = 'buenos aires') {
   const key = 'e0ac5f463540bed37a365e85ae486e39'
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`
   try {
     const response = await fetch(url)
-    const data = await response.json()
-    return data
+    if (response.ok) {
+      hideNotFoundMessage()
+      const data = await response.json()
+      return data
+    } else {
+      displayNotFoundMessage()
+    }
   } catch (err) {
-    console.error(err)
+    console.log(err)
   }
 }
-
-// console.log(getWeather())
 
 const getWeatherWeekly = async function (data, city = 'buenos aires') {
   const key = 'e0ac5f463540bed37a365e85ae486e39'

@@ -6,7 +6,6 @@ import { buildApp } from './domFunctions'
 
 async function startProgram () {
   const searchValue = document.querySelector('.main-weather__search__searchbar').value
-  // searchValue = searchValue.replace(/[^a-zA-Z0-9]/g, '')
   const current = await getWeatherToday(searchValue || 'buenos aires')
   const forecast = await getWeatherWeekly(current)
   clean()

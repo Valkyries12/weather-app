@@ -18,6 +18,13 @@
             <input type="search" class="main-weather__search__searchbar" placeholder="search location...">
             <img class="weather-icon weather-icon-search" src="<%=require('./images/search-icon.png')%>" alt="search icon">
         </form>
+        <div class="main-weather__not-found invisble">
+            <p class="main-weather__not-found__text">
+                Location not found.
+                <br>
+                Search must be in the form of "City", "City, State" or "City, Country".
+            </p>
+        </div>
     </div>
 
     <div class="weather-stats">

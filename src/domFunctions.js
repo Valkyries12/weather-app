@@ -95,12 +95,19 @@ function buildWeatherDay (dataPerDay) {
   return weatherWeeklyContainer
 }
 
-// function clean () {
-//   const weatherWeekly = document.querySelector('.weather-weekly')
-//   const searchValue = document.querySelector('.main-weather__search__searchbar')
-//   weatherWeekly.innerHTML = ''
-//   searchValue.value = ''
-// }
+function hideNotFoundMessage () {
+  const notFoundMsg = document.querySelector('.main-weather__not-found')
+  if (!notFoundMsg.classList.contains('invisible')) {
+    notFoundMsg.classList.add('invisible')
+  }
+}
+
+function displayNotFoundMessage () {
+  const notFoundMsg = document.querySelector('.main-weather__not-found')
+  if (notFoundMsg.classList.contains('invisible')) {
+    notFoundMsg.classList.remove('invisible')
+  }
+}
 
 function buildCurrentWeather (current) {
   setWeatherDescription(current)
@@ -127,4 +134,4 @@ function buildApp (current, forecast) {
   buildWeeklyForecast(forecast)
 }
 
-export { buildApp }
+export { buildApp, displayNotFoundMessage, hideNotFoundMessage }

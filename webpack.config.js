@@ -18,13 +18,7 @@ const rulesForImages = {
   generator: {
     filename: 'img/[hash][ext]'
   }
-  /* use: {
-    loader: 'file-loader',
-    options: {
-      outputPath: 'img/'
-      // name: '[name][hashcontent].[ext]'
-    }
-  } */
+
 }
 
 const rules = [rulesForJavascript, rulesForSass, rulesForImages]

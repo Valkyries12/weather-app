@@ -12,7 +12,6 @@ function kelvinToCelsius (kelvin) {
 
 function trimValue (value) {
   const result = value.replace(/[^a-zA-Z ]/g, '')
-  console.log(result)
   return result
 }
 
